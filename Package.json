@@ -1,5 +1,5 @@
 {
-  "name": "quantum-discord-bot",
+  "name": "quantum",
   "version": "1.0.0",
   "description": "A powerful Discord bot library for managing commands.",
   "main": "quantum.js",

@@ -1,0 +1,14 @@
+{
+  "name": "quantum-discord-bot",
+  "version": "1.0.0",
+  "description": "A powerful Discord bot library for managing commands.",
+  "main": "quantum.js",
+  "scripts": {
+    "start": "node quantum.js"
+  },
+  "author": "Your Name",
+  "license": "MIT",
+  "dependencies": {
+    "discord.js": "^13.3.1"
+  }
+}

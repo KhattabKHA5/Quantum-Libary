@@ -18,4 +18,16 @@ client.login(token);
 >
 
 كيفية تثبيت المكتبة
+< npm i quantum >
 
+طريقة الاستعمال
+<
+const { Quantum, client } = require('quantum');
+const { token, clientId, prefix } = require('./config.json');
+
+Quantum.setupCommandsFolder();
+Quantum.enablePrefixCommands();
+Quantum.enableSlashCommands();
+
+client.login(token);
+>

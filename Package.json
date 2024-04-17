@@ -6,7 +6,7 @@
   "scripts": {
     "start": "node quantum.js"
   },
-  "author": "Your Name",
+  "author": "13f5&Mr Nas3an",
   "license": "MIT",
   "dependencies": {
     "discord.js": "^13.3.1"

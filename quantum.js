@@ -4,6 +4,36 @@ const { token, clientId, prefix } = require('./config.json');
 
 const client = new Client({ intents: [Intents.FLAGS.GUILDS] });
 client.commands = new Collection();
+const readline = require('readline');
+
+// Function to create or update config.json file
+function createConfigFile() {
+    const rl = readline.createInterface({
+        input: process.stdin,
+        output: process.stdout
+    });
+
+    rl.question('Enter your Discord bot token: ', (token) => {
+        rl.question('Enter your bot prefix (!, $, etc.): ', (prefix) => {
+            rl.question('Enter your Discord bot client ID: ', (clientId) => {
+                rl.close();
+
+                const configData = {
+                    token: token,
+                    prefix: prefix,
+                    clientId: clientId
+                };
+
+                // Write config data to config.json
+                fs.writeFileSync('config.json', JSON.stringify(configData, null, 4), 'utf8');
+                console.log('config.json file created successfully.');
+            });
+        });
+    });
+}
+
+// Invoke the function to create or update config.json file
+createConfigFile();
 
 // Setup commands folder
 function setupCommandsFolder() {
